@@ -50,12 +50,28 @@ public class TicTacToe
                     moveCnt = 7;
                     if (isWin("X")) {
                         System.out.println("Player One wins! 3 X's in a row.");
-                    } else if (isTie()) {
-                        System.out.println("Tie!");
                     }
                     else
                     {
-                        System.out.println("Test");
+                        System.out.println("Player Two:");
+                        getMoveCol(board, "O");
+                        display();
+                        if (isWin("O"))
+                        {
+                            System.out.println("Player Two wins! 3 O's in a row.");
+                        }
+                        else
+                        {
+                            System.out.println("Player One:");
+                            getMoveCol(board, "X");
+                            display();
+                            if (isWin("X"))
+                            {
+                                System.out.println("Player One wins! 3 X's in a row.");
+                            }
+                            else if (isTie()) {
+                                System.out.println("Tie!");}
+                        }
                     }
                 }
             }
